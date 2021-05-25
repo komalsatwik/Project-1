@@ -128,6 +128,16 @@ app.delete('/blogs/:id',(req,res)=>{
           console.log(err);
       })
 })
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+
+app.listen(port,function() {
+    console.log("server runnning succesfully");
+})
+
 app.use((req,res)=>{
     res.status(404).render('404',{title :'404'});
 });
