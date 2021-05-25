@@ -90,7 +90,7 @@
     .create-blog input,
     .create-blog textarea{
       display: block;
-      width: 200%;
+      width: 150%;
       margin: 5px 10;
       padding: 8px;
     }
@@ -103,7 +103,7 @@
     }
     .create-blog button{
       margin-top: 20px;
-      background: crimson;
+      background: rgb(175, 24, 212);
       color: white;
       padding: 6px;
       border: 0;
