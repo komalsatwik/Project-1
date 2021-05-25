@@ -27,21 +27,7 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 
-app.get("/add-blog", (req, res) => {
-  const blog = new Blog({
-    title: "My Blog 2",
-    snippet: "about my blog",
-    body: "more about blog",
-  });
-  blog
-    .save()
-    .then((result) => {
-      res.send(result);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
+
 
 app.get("/all-blogs", (req, res) => {
   Blog.find()
